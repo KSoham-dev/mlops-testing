@@ -11,13 +11,13 @@ jobs:
       - uses: iterative/setup-cml@v2
       - run: |
           pip install -r requirements.txt
-          python -m test 2>&1 > test_output.txt
+          python -m test 2>&1 > test_output.md
+          sleep 5
           echo "Ye lo bhai dekh lo ls ka output"
           ls
           echo "Hai ram ye kya hain !!!"
-      - run: |
           echo "Niche main output dikhna chahiye"
-          cat test_output.txt
+          cat test_output.md
           echo "Na dikhe to samaj lena fata hain"
  
           # Create CML report
