@@ -22,7 +22,7 @@ jobs:
  
           # Create CML report
           echo "hello" >> report.md
-          cat test_output.txt >> report.md
+          cat test_output.md >> report.md
           cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
