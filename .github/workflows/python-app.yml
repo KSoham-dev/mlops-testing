@@ -12,7 +12,7 @@ jobs:
       - run: |
           pip install -r requirements.txt
           touch test_output.md
-          python -m -v test > test_output.txt
+          python -m test -v > test_output.txt
           echo "-----------------"
           cat test_output.txt
  
