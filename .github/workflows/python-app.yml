@@ -11,18 +11,14 @@ jobs:
       - uses: iterative/setup-cml@v2
       - run: |
           pip install -r requirements.txt
-          python -m test 2>&1 > test_output.md
-          sleep 5
-          echo "Ye lo bhai dekh lo ls ka output"
-          ls
-          echo "Hai ram ye kya hain !!!"
-          echo "Niche main output dikhna chahiye"
-          cat test_output.md
-          echo "Na dikhe to samaj lena fata hain"
+          touch test_output.md
+          python -m test > test_output.txt
+          echo "-----------------"
+          cat test_output.txt
  
           # Create CML report
           echo "hello" >> report.md
-          cat test_output.md >> report.md
+          cat test_output.txt >> report.md
           cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
