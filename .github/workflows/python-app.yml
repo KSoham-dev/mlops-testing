@@ -12,7 +12,9 @@ jobs:
       - run: |
           pip install -r requirements.txt
           python -m test 2>&1 > test_output.txt
-          cat test_output.txt
+          echo "Ye lo bhai dekh lo ls ka output"
+          ls
+          echo "Hai ram ye kya hain !!!"
  
           # Create CML report
           echo "hello" >> report.md
