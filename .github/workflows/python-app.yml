@@ -11,9 +11,11 @@ jobs:
       - uses: iterative/setup-cml@v2
       - run: |
           pip install -r requirements.txt
+          python -m test 2>&1 > test_output.txt
  
           # Create CML report
           echo "hello" >> report.md
+          cat test_output.txt >> report.md
           cml comment create report.md
         env:
           REPO_TOKEN: ${{ secrets.GITHUB_TOKEN }}
