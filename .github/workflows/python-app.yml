@@ -15,6 +15,7 @@ jobs:
           echo "Ye lo bhai dekh lo ls ka output"
           ls
           echo "Hai ram ye kya hain !!!"
+      - run: |
           echo "Niche main output dikhna chahiye"
           cat test_output.txt
           echo "Na dikhe to samaj lena fata hain"
