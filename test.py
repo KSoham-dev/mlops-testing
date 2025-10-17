@@ -8,7 +8,7 @@ class TestModel(unittest.TestCase):
     self.assertEqual("Soham", "Soham")
 
   def test_case3(self):
-    self.assertEqual("K", "K")
+    self.assertEqual("SK", "SK")
   
 
 if __name__ == "__main__":
