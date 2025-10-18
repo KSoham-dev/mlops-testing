@@ -9,7 +9,6 @@ class TestModel(unittest.TestCase):
 
   def test_case3(self):
     self.assertEqual("SK", "SK")
-  
 
 if __name__ == "__main__":
   unittest.main()
