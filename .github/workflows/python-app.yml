@@ -26,7 +26,8 @@ jobs:
         
       - name: Run tests
         run: |
-          echo "hello" >> report.md
+          echo "Test Report" >> report.md
+          echo "-" >> report.md 
           cat test_output.txt >> report.md
           cml comment create report.md
         env:
